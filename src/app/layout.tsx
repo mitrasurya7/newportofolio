@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en" style={{scrollBehavior: 'smooth'}}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased p-5 bg-dotted md:w-3/5 w-full mx-auto `}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased p-5 bg-dotted-light dark:bg-dotted-dark md:w-3/5 w-full mx-auto `}
       >
         <Header />
         {children}

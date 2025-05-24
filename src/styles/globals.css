@@ -46,8 +46,13 @@ body {
 
 
 @layer utilities {
-  .bg-dotted {
+  .bg-dotted-dark {
     background-image: radial-gradient(circle, #52525b 0.5px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  .bg-dotted-light {
+    background-image: radial-gradient(circle, #a8a29e 0.5px, transparent 1px);
     background-size: 20px 20px;
   }
 }

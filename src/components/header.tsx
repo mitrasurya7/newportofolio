@@ -2,21 +2,22 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { FaEye } from "react-icons/fa";
 import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RiCloseFill } from "react-icons/ri";
+import { usePathname } from "next/navigation";
+import { HiOutlineChartBar } from "react-icons/hi";
 // import useTheme from "@/hooks/useTheme";
 
-
 export default function Header() {
+  const pathname = usePathname();
   const [showSidebar, setShowSidebar] = useState(false);
-//   const { theme, toggleTheme } = useTheme();
-console.log(showSidebar);
+  //   const { theme, toggleTheme } = useTheme();
+  console.log(showSidebar);
   const menu = [
     { name: "Home", href: "/" },
     { name: "Blog", href: "/blogs" },
-    { name: "Services", href: "#services" },
+    { name: "Services", href: "/services" },
   ];
 
   return (
@@ -34,15 +35,22 @@ console.log(showSidebar);
           />
         </div>
         <ul className="p-10">
-          {menu.map((item, index) => (
-            <li
-              key={index}
-              className="text-lg my-2  hover:text-blue-400 cursor-pointer"
-              onClick={() => setShowSidebar(false)}
-            >
-              <Link href={item.href}>{item.name}</Link>
-            </li>
-          ))}
+          {menu.map((item, index) => {
+            const isActive = pathname === item.href;
+            return (
+              <li
+                key={index}
+                className={`text-lg my-2 cursor-pointer ${
+                  isActive
+                    ? "text-blue-500 font-semibold"
+                    : "hover:text-blue-400"
+                }`}
+                onClick={() => setShowSidebar(false)}
+              >
+                <Link href={item.href}>{item.name}</Link>
+              </li>
+            );
+          })}
         </ul>
       </div>
 
@@ -61,19 +69,29 @@ console.log(showSidebar);
             </Link>
           </li>
           <li className="flex gap-1">
-            {menu.map((item, index) => (
-              <Link
-                href={item.href}
-                key={index}
-                className="p-5 hover:text-blue-400  cursor-pointer transition-all duration-500"
-              >
-                {item.name}
-              </Link>
-            ))}
+            {menu.map((item, index) => {
+              const isActive = pathname === item.href;
+              return (
+                <Link
+                  href={item.href}
+                  key={index}
+                  className={`p-5 cursor-pointer transition-all duration-500 ${
+                    isActive
+                      ? "text-blue-500 font-semibold"
+                      : "hover:text-blue-400"
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              );
+            })}
           </li>
           <li className="flex gap-2 items-center">
             <div className="flex gap-1 items-center border rounded-lg p-2 border-[#3a3a3a]">
-              <FaEye />
+              <HiOutlineChartBar className="text-blue-500 w-5 h-5" />
+              <span className="text-sm text-gray-700 dark:text-gray-300">
+                12.4k
+              </span>
             </div>
           </li>
         </ul>
@@ -95,7 +113,7 @@ console.log(showSidebar);
           </li>
           <li className="flex gap-2 items-center">
             <button
-            //   onClick={toggleTheme}
+              //   onClick={toggleTheme}
               className="text-vscode-text p-2 rounded-lg"
               aria-label="Toggle Theme"
             >

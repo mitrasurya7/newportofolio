@@ -7,6 +7,8 @@ import Header from "@/app/_components/header";
 import { PostBody } from "@/app/_components/post-body";
 import { PostHeader } from "@/app/_components/post-header";
 import Comments from "@/components/comments";
+import ShareSection from "@/components/ShareSection";
+// import ShareButton from "@/components/ShareButton";
 
 export default async function Post(props: Params) {
   const params = await props.params;
@@ -31,7 +33,8 @@ export default async function Post(props: Params) {
           />
           <PostBody content={content} />
         </article>
-         <Comments />
+        <ShareSection slug={post.slug} title={post.title} />
+        <Comments />
       </Container>
     </main>
   );

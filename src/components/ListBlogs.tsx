@@ -46,7 +46,7 @@ export default function ListBlogs({ allPosts }: { allPosts: Post[] }) {
                   href={`/blogs/${post.slug}`}
                   className="text-blue-600 dark:text-blue-400 font-medium hover:underline"
                 >
-                  Baca selengkapnya →
+                  Read more →
                 </a>
               </div>
             </div>

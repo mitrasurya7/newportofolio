@@ -15,7 +15,7 @@ export default function Header() {
 console.log(showSidebar);
   const menu = [
     { name: "Home", href: "/" },
-    { name: "Blog", href: "#blogs" },
+    { name: "Blog", href: "/blogs" },
     { name: "Services", href: "#services" },
   ];
 

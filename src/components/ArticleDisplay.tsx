@@ -10,7 +10,7 @@ export default async function ArticleDisplay({posts} : {posts: Post[]}) {
         <h1 className=" ">
           I&apos;m Writing on{" "}
           <span className=" underline  decoration-wavy underline-offset-4 d decoration-blue-400">
-            Medium
+            here...
           </span>
         </h1>
       </div>
@@ -27,7 +27,7 @@ export default async function ArticleDisplay({posts} : {posts: Post[]}) {
                 <span className="relative -left-[1.46rem] top-0 rounded-full h-3 w-3 dark:bg-stone-400 bg-stone-800"></span>
               </span>
               <Link
-                href={`/post/${post.slug}`}
+                href={`/blogs/${post.slug}`}
                 rel="noopener noreferrer"
                 className="block dark:bg-stone-900 bg-stone-100 p-5 rounded-lg border shadow dark:border-stone-700 hover:border-blue-400 transition-all duration-500"
               >
@@ -47,7 +47,7 @@ export default async function ArticleDisplay({posts} : {posts: Post[]}) {
         ))}
       </ul>
       <Link
-        href="/blog"
+        href="/blogs"
         className={`hover:text-vscode-modified transition duration-300 }`}
       >{`See more >>`}</Link>
     </div>

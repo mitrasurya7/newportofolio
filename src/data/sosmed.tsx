@@ -12,7 +12,7 @@ export const dataSocialMedia = [
     },
     {
       name: "Instagram",
-      link: "https://www.instagram.com/mitrasurya.dev/",
+      link: "https://www.instagram.com/mitradev.me/",
       icon: <FaInstagramSquare className={HoverSocial}/>,
     },
     {

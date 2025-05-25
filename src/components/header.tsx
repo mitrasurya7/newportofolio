@@ -37,7 +37,7 @@ console.log(showSidebar);
           {menu.map((item, index) => (
             <li
               key={index}
-              className="text-lg my-2 text-vscode-text hover:text-vscode-modified cursor-pointer"
+              className="text-lg my-2  hover:text-blue-400 cursor-pointer"
               onClick={() => setShowSidebar(false)}
             >
               <Link href={item.href}>{item.name}</Link>
@@ -65,7 +65,7 @@ console.log(showSidebar);
               <Link
                 href={item.href}
                 key={index}
-                className="p-5 hover:text-vscode-modified cursor-pointer transition-all duration-500"
+                className="p-5 hover:text-blue-400  cursor-pointer transition-all duration-500"
               >
                 {item.name}
               </Link>

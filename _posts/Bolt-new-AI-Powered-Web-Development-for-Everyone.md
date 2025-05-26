@@ -2,7 +2,7 @@
 title: "Bolt.new: AI-Powered Web Development for Everyone"
 excerpt: "Bolt.new revolutionizes web development by enabling users to build full-stack applications using natural language prompts. With its browser-based interface and AI integration, creating and deploying web apps has never been more accessible."
 coverImage: "https://f005.backblazeb2.com/file/mitradev/Screenshot+from+2025-05-26+17-22-14.png"
-date: "2025-05-24T12:00:00.000Z"
+date: "2025-05-26T12:00:00.000Z"
 author:
   name: Mitradev
   picture: "https://avatars.githubusercontent.com/u/62651166?v=4"

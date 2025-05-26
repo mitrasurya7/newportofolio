@@ -39,7 +39,7 @@ export default async function ArticleDisplay({posts} : {posts: Post[]}) {
                 </h2>
 
                 <p className="mt-2 text-stone-500 line-clamp-3">
-                  {post.content.slice(0,100)}
+                  {post.excerpt}
                 </p>
               </Link>
             </div>

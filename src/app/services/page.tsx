@@ -11,7 +11,7 @@ import {
 } from "react-icons/fa";
 import { SiFirebase } from "react-icons/si";
 
-const WHATSAPP_NUMBER = "1234567890";
+const WHATSAPP_NUMBER = "6282191868371";
 
 export default function ServicesPage() {
   const [formData, setFormData] = useState({
@@ -162,7 +162,7 @@ export default function ServicesPage() {
               href={item.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 border rounded-lg shadow hover:shadow-lg transition-shadow dark:bg-stone-900 bg-white"
+              className="block p-6 border rounded-lg shadow hover:shadow-lg dark:border-stone-700 transition-shadow dark:bg-stone-900 bg-white"
             >
               <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
               <p className="text-stone-600 dark:text-stone-300">
@@ -204,7 +204,7 @@ export default function ServicesPage() {
         </div>
       </section>
       {/* Contact Section */}
-      <section id="contact" className="mb-20 max-w-5xl mx-auto px-4">
+      <section id="contact" className="mb-20 max-w-5xl mx-auto md:px-4 px-0">
         <h2 className="text-3xl font-bold text-center mb-12">Contact Me</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Left side: Descriptive + contact info */}
@@ -235,7 +235,7 @@ export default function ServicesPage() {
 
           {/* Right side: Form */}
           <form
-            className="bg-stone-100 dark:bg-stone-900 p-8 rounded-xl shadow space-y-6"
+            className="bg-stone-100 dark:bg-stone-900 p-6 rounded-xl shadow space-y-6"
             onSubmit={handleSubmit}
           >
             <div>

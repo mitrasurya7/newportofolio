@@ -7,7 +7,7 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 export const dataSocialMedia = [
     {
       name: "Linkedin",
-      link: "https://www.linkedin.com/in/mitrasurya/",
+      link: "https://www.linkedin.com/in/mitrasurya7/",
       icon: <FaLinkedin className={HoverSocial}/>,
     },
     {
